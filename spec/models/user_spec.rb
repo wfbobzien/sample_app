@@ -101,7 +101,7 @@ describe User do
       specify { user_with_invalid_password.should be_false }
     end
     
-    describe "with a password that's too shot" do
+    describe "with a password that's too short" do
       before { @user.password = @user.password_confirmation = "a" * 5 }
       it { should_not be_valid }
     end
